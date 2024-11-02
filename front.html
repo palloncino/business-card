@@ -4,107 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Antonio Guiotto - Business Card (Front)</title>
     <!-- Import Poppins font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Wrapper and Container Styling */
         .wrapper {
-            background: url('./images/bg.png');
+            background: url('./images/bg.png'), grey;
             background-repeat: no-repeat;
             background-size: cover;
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
             width: 1000px;
             height: 600px;
+            font-family: 'Poppins', sans-serif;
         }
 
         .container {
             position: relative;
-            background: url('./images/monkey.webp');
-            background-repeat: no-repeat;
-            background-position: right;
-            background-size: 600px;
-            box-sizing: border-box;
-            padding: 1rem;
+            /* background: url('./images/monkey.webp') right no-repeat; */
+            background-size: 400px;
+            padding: 2rem;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
+            justify-content: space-between;
             width: 100%;
-            height: 600px;
+            height: 100%;
+            color: white;
+            gap: 1.5rem;
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.6);
+            box-sizing: border-box;
+        }
+
+        /* Header Styling */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-container img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+
+        .name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-left: 0.5rem;
+        }
+
+        /* Content Styling */
+        .main-content-container {
+            display: flex;
+            flex-direction: column;
             gap: 1rem;
         }
 
-        .header-container {
-            font-size: 2rem;
-            color: white;
-            width: 100%;
-            max-height: 80px;
-            height: 100%;
-            flex: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header-container .header-container-group {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100%;
+        .services-list {
+            font-size: 1.2rem;
         }
 
-        .header-container .header-container-group img {
-            height: 100%;
-        }
-
-        .main-content-container {
-            font-size: 2rem;
-            width: 100%;
-            flex: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-container {
-            font-size: 2rem;
-            max-height: 80px;
-            color: white;
-            width: 100%;
-            flex: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .text-1 {
-            font-size: 2rem;
-            background: #000;
-            padding: .4rem .8rem;
-        }
-
-        .text-2 {
+        .services-list strong {
             font-size: 1.4rem;
-            background: #000;
-            padding: .4rem .8rem;
+            margin-bottom: 0.5rem;
+            display: block;
         }
 
-        .Poppins {
-            font-weight: 500;
-            font-family: 'Poppins', sans-serif;
-            /* Apply Poppins font */
+        /* Footer Styling */
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2rem;
+            gap: 1rem;
         }
 
-        .absolute-content-1 {
-            position: absolute;
-            top: 120px;
-            left: 40px;
-            color: white;
-            max-width: 500px;
-            font-size: 1rem;
-
+        /* QR Code Styling */
+        .footer-container .qr-code {
+            width: 80px;
+            height: 80px;
         }
     </style>
 </head>
@@ -113,66 +96,38 @@
 
     <div class="wrapper">
         <div class="container">
-
+            <!-- Header Section -->
             <div class="header-container">
-
-                <div class="header-container-group header-container-group-1">
+                <div style="display: flex; align-items: center;">
                     <img src="./images/A. Guiotto.jpeg" alt="A. Guiotto">
-                    <span class="text-1 Poppins">Antonio Guiotto</span>
+                    <span class="name">Antonio Guiotto</span>
                 </div>
-
-                <div class="header-container-group header-container-group-2">
-                    <span class="text-1 Poppins">Web Applications</span>
-                </div>
-
+                <span class="text-1">Web Applications</span>
             </div>
 
+            <!-- Main Content Section -->
             <div class="main-content-container">
-
-                <div class="absolute-content-1">
-                    <span class="text-2 Poppins">
-                        <span class="text-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                        <ul>
-                            <li>
-                                <span class="text-2">Lorem ipsum</span>
-                            </li>
-                            <li>
-                                <span class="text-2">Lorem ipsum</span>
-                            </li>
-                            <li>
-                                <span class="text-2">Lorem ipsum</span>
-                            </li>
-                        </ul>
-                    </span>
+                <div class="services-list">
+                    <strong>Services:</strong>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Custom Website Development</li>
+                        <li>E-commerce Solutions</li>
+                        <li>UI/UX Design & Optimization</li>
+                    </ul>
                 </div>
             </div>
 
+            <!-- Footer Section with Contact Information and QR Code -->
             <div class="footer-container">
-                <div class="footer-container-group footer-container-group-1">
-                    <span class="text-2 Poppins">powerhydratoni@gmail.com</span>
+                <div>
+                    <div>powerhydratoni@gmail.com</div>
+                    <div>+39 3474943221</div>
                 </div>
-
-                <div class="footer-container-group footer-container-group-2">
-                    <span class="text-2 Poppins">+39 3474943221</span>
-                </div>
+                <img src="./images/qrcode.png" alt="QR Code" class="qr-code">
             </div>
-
         </div>
     </div>
 
 </body>
 
 </html>
-
-
-<br /><br /><br /><br />
-<pre>
-
-    This is the front part, go to <a href="/back.html">back side</a>
-
-    TODOs
-
-    - qr code
-
-</pre>
-<br /><br /><br /><br />
