@@ -45,17 +45,29 @@
             align-items: center;
         }
 
-        .header-container img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 2px solid #fff;
+        .header-container img.profile-pic {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #000;
         }
 
-        .name {
+        .header-container img.logo {
+            width: 80px;
+            height: auto;
+        }
+
+        .title-container {
+            margin-left: 0.5rem;
+        }
+        .title {
             font-size: 2rem;
             font-weight: 700;
-            margin-left: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
         }
 
         /* Content Styling */
@@ -99,20 +111,25 @@
             <!-- Header Section -->
             <div class="header-container">
                 <div style="display: flex; align-items: center;">
-                    <img src="./images/A. Guiotto.jpeg" alt="A. Guiotto">
-                    <span class="name">Antonio Guiotto</span>
+                    <img src="./images/A. Guiotto.jpeg" alt="A. Guiotto" class="profile-pic">
+                    <div class="title-container">
+                        <div class="title">Antonio Guiotto</div>
+                        <div class="subtitle">Web Agency ☀️</div>
+                    </div>
+
                 </div>
-                <span class="text-1">Web Applications</span>
+                <img src="./images/logo.png" alt="Logo" class="logo">
             </div>
 
             <!-- Main Content Section -->
             <div class="main-content-container">
                 <div class="services-list">
-                    <strong>Services:</strong>
+                    <span class="">Services:</span>
                     <ul style="list-style-type: disc; padding-left: 20px;">
                         <li>Custom Website Development</li>
                         <li>E-commerce Solutions</li>
                         <li>UI/UX Design & Optimization</li>
+                        <li>36 EUR/h</li>
                     </ul>
                 </div>
             </div>
