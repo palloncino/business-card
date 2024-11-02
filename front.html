@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antonio Guiotto - Business Card (Front)</title>
-    <!-- Import Poppins font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Import Montserrat font for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         /* Wrapper and Container Styling */
         .wrapper {
@@ -18,13 +18,11 @@
             align-items: center;
             width: 1000px;
             height: 600px;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .container {
             position: relative;
-            /* background: url('./images/monkey.webp') right no-repeat; */
-            background-size: 400px;
             padding: 2rem;
             display: flex;
             flex-direction: column;
@@ -34,7 +32,6 @@
             color: white;
             gap: 1.5rem;
             border-radius: 8px;
-            background-color: rgba(0, 0, 0, 0.6);
             box-sizing: border-box;
         }
 
@@ -48,26 +45,30 @@
         .header-container img.profile-pic {
             width: 80px;
             height: 80px;
+            border-radius: 50%;
             border: 2px solid #000;
         }
 
         .header-container img.logo {
-            width: 80px;
+            width: 70px;
             height: auto;
         }
 
         .title-container {
             margin-left: 0.5rem;
         }
+
         .title {
             font-size: 2rem;
             font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
         .subtitle {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-top: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 0.3rem;
+            color: #FFD700;
         }
 
         /* Content Styling */
@@ -78,13 +79,26 @@
         }
 
         .services-list {
-            font-size: 1.2rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            font-weight: 500;
         }
 
-        .services-list strong {
-            font-size: 1.4rem;
+        .services-list-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #FFD700;
             margin-bottom: 0.5rem;
             display: block;
+        }
+
+        .services-list ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .services-list ul li {
+            margin: 0.2rem 0;
         }
 
         /* Footer Styling */
@@ -92,14 +106,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 1.2rem;
+            font-size: 1rem;
             gap: 1rem;
+            font-weight: 600;
         }
 
         /* QR Code Styling */
         .footer-container .qr-code {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -116,7 +132,6 @@
                         <div class="title">Antonio Guiotto</div>
                         <div class="subtitle">Web Agency ☀️</div>
                     </div>
-
                 </div>
                 <img src="./images/logo.png" alt="Logo" class="logo">
             </div>
@@ -124,13 +139,16 @@
             <!-- Main Content Section -->
             <div class="main-content-container">
                 <div class="services-list">
-                    <span class="">Services:</span>
-                    <ul style="list-style-type: disc; padding-left: 20px;">
-                        <li>Custom Website Development</li>
-                        <li>E-commerce Solutions</li>
-                        <li>UI/UX Design & Optimization</li>
-                        <li>36 EUR/h</li>
+                    <span class="services-list-title">Core Services</span>
+                    <ul>
+                        <li>Full-Stack Web Development</li>
+                        <li>Custom E-commerce Platforms</li>
+                        <li>User Experience & Interface Design</li>
+                        <li>Performance Optimization & SEO</li>
                     </ul>
+                    <span style="font-size: 1.1rem; font-weight: 600; color: #FFD700; display: block; margin-top: 1rem;">
+                        Rate: 36 EUR/hour
+                    </span>
                 </div>
             </div>
 
