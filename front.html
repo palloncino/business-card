@@ -4,11 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antonio Guiotto - Business Card (Front)</title>
+    <title>Antonio Guiotto - Business Card</title>
     <!-- Import Montserrat font for a modern look -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Wrapper and Container Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            background-color: grey;
+            font-family: 'Montserrat', sans-serif;
+        }
+
         .wrapper {
             background: url('./images/bg.png'), grey;
             background-repeat: no-repeat;
@@ -18,104 +28,33 @@
             align-items: center;
             width: 1000px;
             height: 600px;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .container {
-            position: relative;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 100%;
-            height: 100%;
-            color: white;
-            gap: 1.5rem;
             box-sizing: border-box;
+            border: 10px solid black;
         }
 
-        /* Header Styling */
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header-container img.profile-pic {
-            width: 80px;
-            height: 80px;
-            border-radius: 4px;
-            border: 2px solid #000;
-        }
-
-        .header-container img.logo {
-            width: 70px;
-            height: auto;
-            border-radius: 4px;
-        }
-
-        .title-container {
-            margin-left: 0.5rem;
-        }
-
-        .title {
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-top: 0.3rem;
-            color: #FFD700;
-        }
-
-        /* Content Styling */
-        .main-content-container {
+        .content {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
-        }
-
-        .services-list {
-            font-size: 1rem;
-            line-height: 1.5;
-            font-weight: 500;
-        }
-
-        .services-list-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #FFD700;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .services-list ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        .services-list ul li {
-            margin: 0.2rem 0;
-        }
-
-        /* Footer Styling */
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
             align-items: center;
-            font-size: 1rem;
-            gap: 1rem;
-            font-weight: 600;
+            gap: 2rem;
         }
 
-        /* QR Code Styling */
-        .footer-container .qr-code {
-            width: 70px;
-            height: 70px;
-            border-radius: 4px;
+        .profile-pic {
+            background: rgb(255 0 0 / 60%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 7px solid #000;
+        }
+
+        .qr-code {
+            
+            border-radius: 50%;
+            border: 7px solid #000;
+            background: url('./images/qr-code.png');
+            background-size: contain;
+            width: 200px;
+            height: 200px;
         }
     </style>
 </head>
@@ -123,43 +62,12 @@
 <body>
 
     <div class="wrapper">
-        <div class="container">
-            <!-- Header Section -->
-            <div class="header-container">
-                <div style="display: flex; align-items: center;">
-                    <img src="./images/A. Guiotto.jpeg" alt="A. Guiotto" class="profile-pic">
-                    <div class="title-container">
-                        <div class="title">Antonio Guiotto</div>
-                        <div class="subtitle">Web Agency ☀️</div>
-                    </div>
-                </div>
-                <img src="./images/logo.png" alt="Logo" class="logo">
-            </div>
+        <div class="content">
+            <!-- Profile Picture -->
+            <img src="./images/me-2.png" alt="A. Guiotto" class="profile-pic">
 
-            <!-- Main Content Section -->
-            <div class="main-content-container">
-                <div class="services-list">
-                    <span class="services-list-title">Core Services</span>
-                    <ul>
-                        <li>Full-Stack Web Development</li>
-                        <li>Custom E-commerce Platforms</li>
-                        <li>User Experience & Interface Design</li>
-                        <li>Performance Optimization & SEO</li>
-                    </ul>
-                    <span style="font-size: 1.1rem; font-weight: 600; color: #FFD700; display: block; margin-top: 1rem;">
-                        Rate: 36 EUR/hour
-                    </span>
-                </div>
-            </div>
-
-            <!-- Footer Section with Contact Information and QR Code -->
-            <div class="footer-container">
-                <div>
-                    <div>powerhydratoni@gmail.com</div>
-                    <div>+39 3474943221</div>
-                </div>
-                <img src="./images/qrcode.png" alt="QR Code" class="qr-code">
-            </div>
+            <!-- QR Code -->
+            <div class="qr-code"></div>
         </div>
     </div>
 
