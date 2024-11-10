@@ -29,7 +29,7 @@
             width: 1000px;
             height: 600px;
             box-sizing: border-box;
-            border: 10px solid black;
+            border: 3px solid black;
         }
 
         .content {
@@ -44,15 +44,21 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            border: 7px solid #000;
+            border: 3px solid #000;
         }
 
         .qr-code {
-            
-            border-radius: 50%;
-            border: 7px solid #000;
-            background: url('./images/qr-code.png');
-            background-size: contain;
+            /* border-radius: 50%; */
+            /* border: 7px solid #000; */
+            border: 3px solid #000;
+            background-color: white;
+            /* Adds white background */
+            background-image: url('./images/qr-code.png');
+            /* QR code image */
+            background-size: 100%;
+            /* Adjust this value to add padding to the background */
+            background-position: center;
+            background-repeat: no-repeat;
             width: 200px;
             height: 200px;
         }
